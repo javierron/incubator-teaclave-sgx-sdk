@@ -61,7 +61,7 @@ use core::intrinsics::{likely, unlikely};
 // #[cfg(feature = "nightly")]
 // use core::ptr::invalid_mut;
 // Implement it with a cast otherwise.
-#[cfg(not(feature = "nightly"))]
+// #[cfg(not(feature = "nightly"))]
 #[inline(always)]
 fn invalid_mut<T>(addr: usize) -> *mut T {
     addr as *mut T
