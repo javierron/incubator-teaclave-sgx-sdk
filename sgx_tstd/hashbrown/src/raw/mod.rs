@@ -58,8 +58,8 @@ use core::convert::identity as unlikely;
 use core::intrinsics::{likely, unlikely};
 
 // Use strict provenance functions if available.
-#[cfg(feature = "nightly")]
-use core::ptr::invalid_mut;
+// #[cfg(feature = "nightly")]
+// use core::ptr::invalid_mut;
 // Implement it with a cast otherwise.
 #[cfg(not(feature = "nightly"))]
 #[inline(always)]
